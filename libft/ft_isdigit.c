@@ -6,7 +6,7 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 22:07:40 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/06 20:55:33 by nmantill         ###   ########.fr       */
+/*   Updated: 2024/12/10 20:20:46 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_isdigit(int c)
 }
 // int main(void)
 // {
-// 	int	result = ft_isdigit('2');
+// 	int	result = ft_isdigit('A');
 // 	printf("El resultado es:%i.\n", result);
 // 	return(0);
 // }
