@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/06 20:57:46 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/11 20:26:49 by nmantill         ###   ########.fr       */
+/*   Created: 2024/12/11 20:28:38 by nmantill          #+#    #+#             */
+/*   Updated: 2024/12/11 20:34:25 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_tolower(int c)
 {
-	if ((c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z') || (c >= 48 && c <= 57))
-		return (1);
-	else
-		return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
-
-// int	main(void)
-// {
-// 	int	result = ft_isalnum('A');
-// 	printf("El resultado es: %i.\n", result);
-// 	return(0);
-// }
