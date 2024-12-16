@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 19:09:05 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/16 20:25:12 by nmantill         ###   ########.fr       */
+/*   Created: 2024/12/16 20:28:30 by nmantill          #+#    #+#             */
+/*   Updated: 2024/12/16 21:17:39 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-
-int	ft_strlen(const char *strg)
+void	ft_memset(void *s, int c, size_t len)
 {
-	int	i;
+	char	*pntr;
 
-	i = 0;
-	while (strg[i])
-		i++;
-	return (i);
+	pntr = (unsigned char *) s;
+
+	while (len > 0)
+	{
+		*pntr = (unsigned char)c;
+
+		pntr++;
+		len--;
+	}
+	return (b);
 }
-
-// int	main(void)
-// {
-// 	int result = ft_strlen("abc");
-// 	printf("El resultado es:%i.\n", result);
-// 	return (0);
-// }
