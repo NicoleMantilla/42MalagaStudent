@@ -6,7 +6,7 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 20:28:30 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/16 21:17:39 by nmantill         ###   ########.fr       */
+/*   Updated: 2024/12/16 21:18:24 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,4 @@ void	ft_memset(void *s, int c, size_t len)
 	}
 	return (b);
 }
+
