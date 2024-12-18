@@ -3,13 +3,13 @@
 
 NAME = liblibft.a
 
-#compilador y banderas de compilación
+#compilador y banderas de compilación gcc -o compile_all.out main.c -L. -llibft
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 #archivos fuente y archivos objeto 
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_tolower.c ft_toupper.c 
+SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memset.c
 OBJ = $(SRC:.c=.o)
 
 #archivo de encabezado 
@@ -42,3 +42,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all 
+
+#Ejecutar: ./compile_all.out
