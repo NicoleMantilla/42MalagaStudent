@@ -6,7 +6,7 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 20:30:55 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/20 19:31:02 by nmantill         ###   ########.fr       */
+/*   Updated: 2024/12/20 19:49:44 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + j] = src[j];
 		j++;
 	}
-
 	if (i < size)
 	{
 		dst[i + j] = '\0';
