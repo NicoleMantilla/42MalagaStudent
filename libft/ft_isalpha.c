@@ -6,7 +6,7 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 20:25:41 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/10 20:19:49 by nmantill         ###   ########.fr       */
+/*   Updated: 2024/12/21 18:04:13 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-
 // int main(void)
 // {
 //     int result = ft_isalpha('W');

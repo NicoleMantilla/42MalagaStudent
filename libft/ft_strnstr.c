@@ -6,9 +6,11 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 13:08:21 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/21 17:16:10 by nmantill         ###   ########.fr       */
+/*   Updated: 2024/12/21 18:00:45 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 char	*strnstr(const char *big, const char *little, size_t len)
 {

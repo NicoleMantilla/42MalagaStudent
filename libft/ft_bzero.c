@@ -6,11 +6,13 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 21:29:48 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/20 19:42:13 by nmantill         ###   ########.fr       */
+/*   Updated: 2024/12/21 18:03:54 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
+#include <libft.h>
+
+void	ft_bzero(void *s, size_t len)
 {
 	char	*pntr;
 
@@ -18,6 +20,6 @@ void	ft_bzero(void *s, size_t n)
 	while (len > 0)
 	{
 		*(pntr++) = 0;
-		n--;
+		len--;
 	}
 }
