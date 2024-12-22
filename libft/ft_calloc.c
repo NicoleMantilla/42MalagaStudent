@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 20:05:38 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/22 18:19:05 by nmantill         ###   ########.fr       */
+/*   Created: 2024/12/22 17:33:41 by nmantill          #+#    #+#             */
+/*   Updated: 2024/12/22 18:18:54 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*str;
+	unsigned char	*tmp;
 	size_t			i;
 
 	i = 0;
-	str = (char *)s;
-	while (i < n)
+	tmp = malloc(nmemb * size);
+	if (!tmp)
+		return (NULL);
+	while (i < nmemb * size)
 	{
-		if ((unsigned char)str[i] == (unsigned char) c)
-			return ((char *)s + i);
-		i++;
+		tmp[i++] = 0;
 	}
-	return (NULL);
+	return (tmp);
 }
+
+// int	main(void)
+// {
+// 	size_t i;
+// 	char *str = ft_calloc(11, sizeof(char));
+
+// 	i = 0;
+// 	while (i < 11 && str[i] == '\0')
+// 	{
+// 		str[i] = '1';
+// 		i++;
+// 	}
+// 	printf("result: %s\n,",str)
+// 	return (0);
+// }
