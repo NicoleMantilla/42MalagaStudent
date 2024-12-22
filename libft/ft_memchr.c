@@ -6,10 +6,11 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 20:05:38 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/22 16:11:30 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2024/12/22 16:12:18 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
