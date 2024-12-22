@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 22:21:31 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/20 20:01:59 by nmantill         ###   ########.fr       */
+/*   Created: 2024/12/21 13:08:21 by nmantill          #+#    #+#             */
+/*   Updated: 2024/12/21 18:00:45 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-char	*strchr(const char *s, int c)
+char	*strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	i;
-	char			cc;
+	size_t	i;
+	size_t	j;	
 
-	cc = (char) c;
+	if (*little == '\0')
+		return ((char *)big);
 	i = 0;
-	while (s[i])
+	while (i < len && big[i])
 	{
-		if (s[i] == cc)
-			return (&s[i]);
+		j = 0;
+		while (big[i + j] == little[j] && i + j < len)
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)big + i);
+			j++;
+		}
 		i++;
 	}
-	if (s[i] == cc)
-		return ((char *) &s[i]);
 	return (NULL);
 }

@@ -5,18 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 21:43:03 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/19 21:55:26 by nicolemanti      ###   ########.fr       */
+/*   Created: 2024/12/20 20:05:38 by nmantill          #+#    #+#             */
+/*   Updated: 2024/12/22 16:11:30 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	
+	unsigned char	*str;
+	size_t			i;
+
 	i = 0;
-	while(i < n) 
+	str = (char *)s;
+	while (i < n)
 	{
-		if (s[i] < )
+		if ((unsigned char)str[i] == (unsigned char) c)
+			return ((char *)s + i);
+		i++;
 	}
+	return (NULL);
 }

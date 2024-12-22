@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 22:21:31 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/20 20:01:59 by nmantill         ###   ########.fr       */
+/*   Created: 2024/12/21 14:36:08 by nmantill          #+#    #+#             */
+/*   Updated: 2024/12/21 18:05:16 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*strchr(const char *s, int c)
+int	atoi(const char *nptr)
 {
-	unsigned int	i;
-	char			cc;
+	int	result;
+	int	sign;
 
-	cc = (char) c;
-	i = 0;
-	while (s[i])
+	result = 0;
+	sign = 1;
+	while (*nptr == " " || *nptr == '\t' || *nptr == '\n')
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (s[i] == cc)
-			return (&s[i]);
-		i++;
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
 	}
-	if (s[i] == cc)
-		return ((char *) &s[i]);
-	return (NULL);
+	while (*nptr >= '0' && *nptr < '9')
+	{
+		result = result * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (result * sign);
 }
