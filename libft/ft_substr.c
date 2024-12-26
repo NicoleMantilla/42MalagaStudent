@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/21 18:01:31 by nmantill          #+#    #+#             */
-/*   Updated: 2024/12/26 18:33:49 by nicolemanti      ###   ########.fr       */
+/*   Created: 2024/12/26 13:37:51 by nicolemanti       #+#    #+#             */
+/*   Updated: 2024/12/26 18:27:36 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBLIBFT_H
-//inicio de las guardias de inclusión 
-# define LIBLIBFT_H
-# include <stdlib.h>
-# include <unstd.h>
+#include <libft.h>
 
-int	ft_isalpha(int c);
-int ft_isascii(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isprint(int c);
-int	ft_tolower(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-int	ft_strlen(const char *strg);
-void *ft_memset(void *s, int c, size_t len);
-
-
-#endif
+char *ft_substr(char const *s, unsigned int start,size_t len)
+{
+	size_t j;
+	size_t i;
+	char *sbstr;
+	
+	sbstr = (char	*)malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (NULL);				
+	
+	i = start;
+	j = 0;
+	
+	while (j < len && s[i] != '\0')
+	{
+		sbstr[j] = s[i];
+		i++;
+		j++;
+	}
+	sbstr[j] = '\0';
+	return (sbstr);
+}
