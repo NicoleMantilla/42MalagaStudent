@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 18:30:12 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/26 18:41:27 by nicolemanti      ###   ########.fr       */
+/*   Created: 2024/12/26 18:53:32 by nicolemanti       #+#    #+#             */
+/*   Updated: 2024/12/26 18:55:47 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void ft_putchar_fd(char c, int fd)
+void ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	ft_putstr(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-
