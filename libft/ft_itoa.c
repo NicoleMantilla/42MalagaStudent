@@ -6,11 +6,11 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 19:29:03 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/28 17:05:03 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/02 14:02:48 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 char	*ft_itoa(int n)
 {
 	char *str;

@@ -1,20 +1,20 @@
 #comentario 
 #nombre del archivo de la biblioteca 
 
-NAME = liblibft.a
+NAME = libft.a
 
-#compilador y banderas de compilación gcc -o compile_all.out main.c -L. -llibft
+#compilador y banderas de compilación gcc -o compile_all.out main.c -L. -lft
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 #archivos fuente y archivos objeto 
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_tolower.c ft_toupper.c ft_memset.c
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 OBJ = $(SRC:.c=.o)
 
 #archivo de encabezado 
 
-INCLUDE = mylib.h
+INCLUDE = libft.h
 
 #crear bibliotecas y eliminar archivos
 AR = ar rcs
@@ -28,10 +28,10 @@ all: $(NAME)
 
 #Regla para crear la biblioteca 
 $(NAME): $(OBJ)
-	$(AR) $@ $^
+	$(AR) $(NAME) $(OBJ)
 #Pasar archivos .c a .o 
 %.o: %.c $(INCLUDE)
-	$(CC) $(CFLAGS) -c -o $@ $<	
+	$(CC) $(CFLAGS) -c $< -o $@	
 
 #Regla para eliminar todos los archivos objeto creados 
 clean: 

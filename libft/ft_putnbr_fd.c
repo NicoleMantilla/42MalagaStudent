@@ -6,11 +6,11 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 18:56:23 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/26 19:13:20 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/02 14:22:45 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void ft_putnbr_fd(int n, int fd)
 {

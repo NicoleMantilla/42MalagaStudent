@@ -6,11 +6,11 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 17:14:29 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/28 17:43:04 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/02 14:06:39 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
@@ -26,6 +26,6 @@ char *ft_strmapi(char const *s, char (*f) (unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
-	str[i] = '\0'
+	str[i] = '\0';
 	return (str);
 }

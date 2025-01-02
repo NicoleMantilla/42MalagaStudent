@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 22:21:31 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/20 20:01:59 by nmantill         ###   ########.fr       */
+/*   Updated: 2025/01/02 15:16:14 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == cc)
-			return (&s[i]);
+			return ((char *)&s[i]);
 		i++;
 	}
 	if (s[i] == cc)
-		return ((char *) &s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }

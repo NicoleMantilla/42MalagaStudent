@@ -6,11 +6,11 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 18:30:12 by nicolemanti       #+#    #+#             */
-/*   Updated: 2024/12/26 18:41:27 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/02 14:21:55 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void ft_putchar_fd(char c, int fd)
 {
