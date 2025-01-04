@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
+/*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 13:41:56 by nicolemanti       #+#    #+#             */
-/*   Updated: 2025/01/02 21:35:57 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/04 13:00:42 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *single;
+	char	*single;
 	int		i;
 	int		j;
 	int		total;

@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
+/*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 19:29:03 by nicolemanti       #+#    #+#             */
-/*   Updated: 2025/01/02 14:02:48 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/04 12:53:43 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_itoa(int n)
 {
-	char *str;
+	char	*str;
 	long	nbr;
 	size_t	size;
 

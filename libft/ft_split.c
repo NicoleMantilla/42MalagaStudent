@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
+/*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 14:46:10 by nicolemanti       #+#    #+#             */
-/*   Updated: 2025/01/02 14:58:49 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/04 13:00:22 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_count_words(const char *s, char c)
+int	ft_count_words(const char *s, char c)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (*s)
@@ -31,11 +31,11 @@ int ft_count_words(const char *s, char c)
 	return (count);
 }
 
-static char **ft_fill_array(char **aux, const char *s, char c)
+static char	**ft_fill_array(char **aux, const char *s, char c)
 {
-	size_t 	start;
-	size_t 	i;
-	int 	k;
+	size_t	start;
+	size_t	i;
+	int		k;
 
 	start = 0;
 	i = 0;
@@ -56,11 +56,11 @@ static char **ft_fill_array(char **aux, const char *s, char c)
 	return (aux);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **aux;
-	int nwords;
-	
+	char	**aux;
+	int		nwords;
+
 	if (!s)
 		return (NULL);
 	nwords = ft_count_words(s, c);
