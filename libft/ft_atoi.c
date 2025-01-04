@@ -6,31 +6,31 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 14:36:08 by nmantill          #+#    #+#             */
-/*   Updated: 2025/01/04 19:05:50 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/04 19:21:56 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	atoi(const char *str)
 {
 	int	result;
 	int	sign;
 
 	result = 0;
 	sign = 1;
-	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\n')
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	while (*str == ' ' || *str == '\t' || *str == '\n')
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (*nptr == '-')
+		if (*str == '-')
 			sign = -1;
-		nptr++;
+		str++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (*nptr - '0');
-		nptr++;
+		result = result * 10 + (*str - '0');
+		str++;
 	}
 	return (result * sign);
 }

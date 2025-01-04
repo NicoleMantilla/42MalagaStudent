@@ -6,7 +6,7 @@
 /*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 18:01:31 by nmantill          #+#    #+#             */
-/*   Updated: 2025/01/04 19:14:16 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/04 19:23:54 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <string.h>
 # include <stdio.h>
 
-int						atoi(const char *nptr);
+int						atoi(const char *str);
 void					ft_bzero(void *s, size_t len);
 void					*ft_calloc(size_t nmemb, size_t size);
 int						ft_isalnum(int c);
