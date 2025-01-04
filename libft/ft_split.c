@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 14:46:10 by nicolemanti       #+#    #+#             */
-/*   Updated: 2025/01/04 13:00:22 by nmantill         ###   ########.fr       */
+/*   Updated: 2025/01/04 19:03:22 by nicolemanti      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,42 @@ int	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-static char	**ft_fill_array(char **aux, const char *s, char c)
+static char	**ft_free_array(char **array, int size)
 {
-	size_t	start;
-	size_t	i;
-	int		k;
+	int	i;
 
-	start = 0;
 	i = 0;
-	k = 0;
-	while (s[i] == c)
+	while (i < size)
 	{
-		if (i > start)
-		{
-			if (i > start)
-				aux[k++] = ft_substr(s, start, i - start);
-			start = i + 1;
-		}
+		free(array[i]);
 		i++;
 	}
-	if (i > start)
-		aux[k++] = ft_substr(s, start, i - start);
+	free(array);
+	return (NULL);
+}
+
+static char	**ft_fill_array(char **aux, const char *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	int		k;
+
+	i = 0;
+	k = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i])
+		{
+			j = i;
+			while (s[i] && s[i] != c)
+				i++;
+			aux[k] = ft_substr(s, j, i - j);
+			if (!aux[k++])
+				return (ft_free_array(aux, k - 1));
+		}
+	}
 	aux[k] = NULL;
 	return (aux);
 }
@@ -64,9 +79,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nwords = ft_count_words(s, c);
-	aux = malloc((nwords +1) * sizeof(char *));
+	aux = malloc((nwords + 1) * sizeof(char *));
 	if (!aux)
 		return (NULL);
-	aux = ft_fill_array(aux, s, c);
-	return (aux);
+	return (ft_fill_array(aux, s, c));
 }
