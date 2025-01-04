@@ -6,11 +6,26 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 19:29:03 by nicolemanti       #+#    #+#             */
-/*   Updated: 2025/01/04 12:53:43 by nmantill         ###   ########.fr       */
+/*   Updated: 2025/01/04 13:59:22 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	ft_numlen(long nbr)
+{
+	size_t	len;
+
+	len = 0;
+	if (nbr <= 0)
+		len++;
+	while (nbr)
+	{
+		nbr /= 10;
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
@@ -19,28 +34,21 @@ char	*ft_itoa(int n)
 	size_t	size;
 
 	nbr = n;
-	size = n > 0 ? 0 : 1;
-	nbr = nbr > 0 ? nbr : -nbr;
-	while (n)
+	if (nbr < 0)
+		nbr = -nbr;
+	size = ft_numlen(n);
+	str = (char *)malloc(size +1);
+	if (!str)
+		return (NULL);
+	str[size] = '\0';
+	while (size > 0)
 	{
-		n /= 10;
-		size++;
-	}
-
-	if (!(str = (char	*)malloc(size + 1)))
-		return (0);
-	*(str + size--) = '\0';
-	while (nbr > 0)
-	{
-		*(str + size--) = nbr % 10 + '0';
+		str[--size] = nbr % 10 + '0';
 		nbr /= 10;
 	}
-	
-	if (size == 0 && str[1] == '0')
-		*(str + size) = '0';
-	else if (size == 0 && str[1] != '\0')
-		*(str + size) = '-';
-	
-	return(str);
-	
+	if (n < 0)
+		str[0] = '-';
+	else if (n == 0)
+		str[0] = '0';
+	return (str);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolemantillafernandez <nicolemantilla    +#+  +:+       +#+        */
+/*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 18:01:31 by nmantill          #+#    #+#             */
-/*   Updated: 2025/01/02 21:47:48 by nicolemanti      ###   ########.fr       */
+/*   Updated: 2025/01/04 14:04:31 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,16 @@ void					ft_putnbr_fd(int n, int fd);
 char					*ft_strchr(const char *s, int c);
 char					*ft_strdup(const char *s);
 int						ft_strlen(const char *strg);
-char 					*ft_strmapi(char const *s, char (*f) (unsigned int, char));
+char					*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 size_t					ft_strlcat(char *dst, const char *src, size_t size);
 size_t					ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char					**ft_split(char const *s, char c);
 int						ft_strncmp(const char *s1, const char *s2, size_t n);
-char					*ft_strnstr(const char *big, const char *little,size_t len);
+char					*ft_strnstr(const char *big, const char *little, size_t len);
 char					*ft_strrchr(const char *s, int c);
-char 					*ft_strjoin(char const *s1, char const *s2);
+char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s1, char const *set);
-char					*ft_substr(char const *s, unsigned int start,size_t len);
+char					*ft_substr(char const *s, unsigned int start, size_t len);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
-
-
 #endif

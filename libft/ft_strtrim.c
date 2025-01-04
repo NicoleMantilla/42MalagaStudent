@@ -6,7 +6,7 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:05:02 by nicolemanti       #+#    #+#             */
-/*   Updated: 2025/01/04 13:11:12 by nmantill         ###   ########.fr       */
+/*   Updated: 2025/01/04 14:01:36 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*start;
 	const char	*end;
+	char		*d;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -25,7 +26,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = s1 + ft_strlen(s1) - 1;
 	while (end > start && ft_strchr(set, *end))
 		end--;
-	char *d = (char *)malloc(end - start);
+	d = (char *)malloc(end - start);
 	if (!d)
 		return (NULL);
 	ft_memcpy(d, start, end - start + 1);
