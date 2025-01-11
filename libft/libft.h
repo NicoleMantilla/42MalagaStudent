@@ -6,7 +6,7 @@
 /*   By: nmantill <nmantill@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 18:01:31 by nmantill          #+#    #+#             */
-/*   Updated: 2025/01/07 19:20:50 by nmantill         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:29:30 by nmantill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,5 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 #endif
